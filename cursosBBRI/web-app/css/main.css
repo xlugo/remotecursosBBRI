@@ -11,12 +11,13 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-	background-color: #ddd;
+	/*background-color: #ddd;
 	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
 	background-image: linear-gradient(top, #aaa, #ddd);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
 	background-repeat: no-repeat;
+	/*
 	height: 100%;
 	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
 	-webkit-box-sizing: border-box;
@@ -40,7 +41,7 @@ body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 100%;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
@@ -522,21 +523,22 @@ th:hover, tr:hover {
 /* ACTION BUTTONS */
 
 .buttons {
-	background-color: #efefef;
+	background-color: ;
 	overflow: hidden;
 	padding: 0.3em;
-	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	 /*  -moz-box-shadow: 0 0 3px 1px #aaaaaa;
 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
 	        box-shadow: 0 0 3px 1px #aaaaaa;
+	        */
 	margin: 0.1em 0 0 0;
 	border: none;
 }
 
 .buttons input,
 .buttons a {
-	background-color: transparent;
+	background-color: #094AB1;
 	border: 0;
-	color: #666666;
+	color: #FFFFFF;
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 0.25em 0;
@@ -551,10 +553,10 @@ th:hover, tr:hover {
 
 .buttons input:hover, .buttons input:focus,
 .buttons a:hover, .buttons a:focus {
-	background-color: #999999;
+	background-color: #0993b1;
 	color: #ffffff;
 	outline: none;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	
 	   -moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	        box-shadow: none;
@@ -599,32 +601,34 @@ a.skip {
 	clear:both;
 	text-align: center;
 	padding: 3px;
-	border-top: 1px solid #333;
 }
 
 #topbar {
 	text-align:left;
-	width: 778px;
+	width: 100%;
 	margin: 0px auto;
 	padding: 5px 0;
+	background-color:;
 }
 
 #topbar #menu {
 	float: right;
-	width: 240px;
-	text-align: right;
+	width: 15%;
 	font-size: 10px;
+	background-color:;
 }
 
 #header {
-	width: 778px;
+	width:100%;
 	background-color: #FFFFFF;
 	height: 70px;
 	margin: 0px auto;
+	background-color:;
 }
 
+
 #header h1 {
-	font-family:Arial,sans-serif;
+	font-family :Arial,sans-serif;
 	color: Black;
 	padding: 20px 0 0 4px;
 	font-size:1.6em;
@@ -645,7 +649,7 @@ body {
 	color: #333333;
 }
 #page {
-width: 778px;
+width: 90%;
 margin: 0px auto;
 padding: 4px 0;
 text-align:left;
@@ -653,13 +657,16 @@ text-align:left;
 
 #content {
 float: left;
-width: 560px;
+width: 80%;
 color: #000;
+background-color:;
 }
 #sidebar {
 float: right;
-width: 200px;
+width: 20%;
 color: #000;
 padding: 3px;
+background-color: ;
+
 }
 

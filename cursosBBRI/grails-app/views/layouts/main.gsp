@@ -21,25 +21,31 @@
 		
 		
 	<div id="page">
+	
 		  <div id="spinner" class="spinner" style="display: none;">
 		   <img src="${createLinkTo(dir:'images',file:'spinner.gif')}"alt="Spinner" />
-		  </div>		
+		  </div>	
+		  	
 		  <div id="topbar">
 	      <g:render template="/common/topbar" />	
 	      </div> 
+	      
 		  <div id="header">
 			<h1>Control de cursos Blackboard</h1>
-		   </div>			   
+		   </div>	
+		   		   
 		   <div id="content">
-		   Página principal del proyecto			
+		    <g:layoutBody />
+
 		   </div>
+		   
 		   <div id="sidebar">
 			<g:render template="/common/buddies" />
-		</div>
-		   	
+		   </div>
+		   		   	
 		  <div id="footer">
 		    <g:render template="/common/footer" />
 	 	  </div>
 	</div>		
-	</body>
+ </body>
 </html>

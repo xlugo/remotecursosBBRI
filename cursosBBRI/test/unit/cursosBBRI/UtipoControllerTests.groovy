@@ -1,17 +1,15 @@
-package cursosbbri
+package cursosBBRI
 
 
 
 import grails.test.mixin.*
 import org.junit.*
 
-import cursosBBRI.AlumnoController;
-
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(AlumnoController)
-class AlumnoControllerTests {
+@TestFor(UtipoController)
+class UtipoControllerTests {
 
     void testSomething() {
        fail "Implement me"
