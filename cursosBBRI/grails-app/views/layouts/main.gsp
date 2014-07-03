@@ -36,12 +36,13 @@
 		   		   
 		   <div id="content">
 		    <g:layoutBody />
-
 		   </div>
 		   
+		   <!-- 
 		   <div id="sidebar">
 			<g:render template="/common/buddies" />
 		   </div>
+		    -->
 		   		   	
 		  <div id="footer">
 		    <g:render template="/common/footer" />
