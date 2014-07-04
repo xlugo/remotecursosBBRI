@@ -9,4 +9,8 @@ class Cmodalidad {
 	static constraints = {
 		descripcion maxSize: 128
 	}
+	
+	String toString(){
+		descripcion
+	}
 }

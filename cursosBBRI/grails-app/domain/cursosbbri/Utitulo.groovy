@@ -11,4 +11,8 @@ class Utitulo {
 	static constraints = {
 		descripcion maxSize: 45
 	}
+	
+	String toString(){
+		descripcion
+	}
 }

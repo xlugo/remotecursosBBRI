@@ -1,5 +1,6 @@
 package cursosbbri
 
-class AlumnoController {
+class CtipoController {
+
 	def scaffold = true
 }

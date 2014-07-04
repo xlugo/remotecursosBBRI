@@ -1,6 +1,6 @@
 package cursosbbri
 
-class UfuncionController {
+class CmodalidadController {
 
    def scaffold = true
 }

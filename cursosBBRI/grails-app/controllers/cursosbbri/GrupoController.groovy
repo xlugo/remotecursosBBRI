@@ -1,6 +1,6 @@
 package cursosbbri
 
-class UtipoController {
+class GrupoController {
 
     def scaffold = true
 }

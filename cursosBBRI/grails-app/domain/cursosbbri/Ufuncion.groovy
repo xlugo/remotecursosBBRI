@@ -8,8 +8,13 @@ class Ufuncion {
 	                  contactos: Contacto,
 	                  cursos: Curso,
 	                  instructors: Instructor]
+	static belongsTo = [Curso]
 
 	static constraints = {
 		descripcion maxSize: 128
+	}
+	
+	String toString(){
+		descripcion
 	}
 }

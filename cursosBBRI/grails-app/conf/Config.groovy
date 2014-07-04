@@ -60,14 +60,17 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = false
 
 //_RI
-grails.plugin.reveng.manyToManyBelongsTos = ['grupo_alumnos': 'alumno', 'ufuncion_cursos': 'curso']
+grails.plugin.reveng.manyToManyBelongsTos = ['alumno_grupos': 'grupo', 'curso_ufuncions': 'ufuncion']
+//grails.plugin.reveng.includeTables = ['utipo']
 
 environments {
 	development {
 		grails.logging.jul.usebridge = true
 		
 		//grails.plugin.reveng.manyToManyTables = ['inscripcion']
-grails.plugin.reveng.manyToManyBelongsTos = ['grupo_alumnos': 'alumno', 'ufuncion_cursos': 'curso']
+//grails.plugin.reveng.manyToManyBelongsTos = ['grupo_alumnos': 'alumno', 'ufuncion_cursos': 'curso']
+		//grails.plugin.reveng.includeTables = ['utipo']
+		
 	}
 	production {
 		grails.logging.jul.usebridge = false

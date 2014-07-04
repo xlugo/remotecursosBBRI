@@ -9,4 +9,8 @@ class Ctipo {
 	static constraints = {
 		descripcion maxSize: 128
 	}
+	
+	String toString(){
+		descripcion
+	}
 }

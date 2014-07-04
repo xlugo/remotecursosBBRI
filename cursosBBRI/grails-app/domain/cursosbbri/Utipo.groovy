@@ -8,11 +8,11 @@ class Utipo {
 	                  contactos: Contacto,
 	                  instructors: Instructor]
 
-	static mapping = {
-		id generator: "assigned"
-	}
-
 	static constraints = {
 		descripcion maxSize: 128
+	}
+	
+	String toString(){
+		descripcion
 	}
 }

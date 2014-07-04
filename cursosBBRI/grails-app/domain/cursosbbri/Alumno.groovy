@@ -13,13 +13,12 @@ class Alumno {
 	String telefono
 	String telefonoext
 	Date fechacreacion
-	Date fechamodificacion
 	Utipo utipo
 	Utitulo utitulo
 	Ufuncion ufuncion
 
 	static hasMany = [grupos: Grupo]
-	static belongsTo = [Grupo, Ufuncion, Utipo, Utitulo]
+	static belongsTo = [Ufuncion, Utipo, Utitulo]
 
 	static constraints = {
 		unisoft maxSize: 45
@@ -32,5 +31,9 @@ class Alumno {
 		oficina nullable: true, maxSize: 45
 		telefono nullable: true, maxSize: 45
 		telefonoext nullable: true, maxSize: 45
+	}
+	
+	String toString(){
+		"$nombres $apellidopaterno $apellidomaterno"
 	}
 }

@@ -13,7 +13,6 @@ class Instructor {
 	String telefono
 	String telefonoext
 	Date fechacreacion
-	Date fechamodificacion
 	Utipo utipo
 	Utitulo utitulo
 	Ufuncion ufuncion
@@ -32,5 +31,9 @@ class Instructor {
 		oficina nullable: true, maxSize: 45
 		telefono nullable: true, maxSize: 45
 		telefonoext nullable: true, maxSize: 45
+	}
+	
+	String toString(){
+		"$nombres $apellidopaterno $apellidomaterno"
 	}
 }

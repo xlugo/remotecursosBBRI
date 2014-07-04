@@ -1,13 +1,13 @@
 package cursosbbri
 
-class Ctitulo {
+class Estacionano {
 
 	String descripcion
 
-	static hasMany = [cursos: Curso]
+	static hasMany = [pacademicos: Pacademico]
 
 	static constraints = {
-		descripcion maxSize: 128
+		descripcion maxSize: 45
 	}
 	
 	String toString(){
