@@ -17,12 +17,20 @@ class Curso {
 	static belongsTo = [Cmodalidad, Contacto, Ctipo, Ctitulo, Pacademico]
 
 	static constraints = {
+		pacademico()
+		ctitulo()
+		ctipo()
+		cmodalidad()
+		ufuncions()
 		requisitos maxSize: 128
-		notas nullable: true, maxSize: 128
 		proposito nullable: true, maxSize: 128
+		notas nullable: true, maxSize: 128
+		contacto()
+		fechacreacion()
+		grupos(display:false)
 	}
 	
 	String toString(){
 		"$ctitulo $pacademico"
-	}
+		}
 }

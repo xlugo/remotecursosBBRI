@@ -14,10 +14,16 @@ class Grupo {
 	static belongsTo = [Alumno, Curso, Instructor, Salon]
 
 	static constraints = {
+		curso()
+		salon()
+		fhorainicio()
+		fhorafinal()
 		fechaapertura nullable: true
+		alumnos(display:false)
+		fechacreacion ()
 	}
 	
 	String toString(){
-		fhorainicio
+		"$salon  $fhorainicio"
 	}
 }

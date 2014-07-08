@@ -11,7 +11,11 @@ class Ufuncion {
 	static belongsTo = [Curso]
 
 	static constraints = {
-		descripcion maxSize: 128
+		descripcion maxSize: 128, blank : false, unique:true
+		alumnos(display:false)
+		contactos(display:false)
+		cursos(display:false)
+		instructors(display:false)
 	}
 	
 	String toString(){

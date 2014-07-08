@@ -9,7 +9,10 @@ class Utitulo {
 	                  instructors: Instructor]
 
 	static constraints = {
-		descripcion maxSize: 45
+		descripcion maxSize: 45,  blank : false, unique:true
+		alumnos(display:false)
+		contactos(display:false)
+		instructors(display:false)
 	}
 	
 	String toString(){

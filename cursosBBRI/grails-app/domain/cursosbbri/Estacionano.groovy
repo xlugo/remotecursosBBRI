@@ -7,7 +7,8 @@ class Estacionano {
 	static hasMany = [pacademicos: Pacademico]
 
 	static constraints = {
-		descripcion maxSize: 45
+		descripcion maxSize: 45, blank : false, unique:true
+		pacademicos(display:false)
 	}
 	
 	String toString(){

@@ -21,16 +21,23 @@ class Contacto {
 	static belongsTo = [Ufuncion, Utipo, Utitulo]
 
 	static constraints = {
-		unisoft maxSize: 45
-		nombres maxSize: 45
-		apellidopaterno maxSize: 45
-		apellidomaterno maxSize: 45
-		correo maxSize: 45
+		unisoft maxSize: 45, blank : false, unique:true
+		utitulo()
+		nombres maxSize: 45, blank: false
+		apellidopaterno maxSize: 45, blank: false 
+		apellidomaterno maxSize: 45, blank: false
+		correo maxSize: 45 , email: true, blank : false
 		departamento nullable: true, maxSize: 128
 		puesto nullable: true, maxSize: 128
 		oficina nullable: true, maxSize: 45
 		telefono nullable: true, maxSize: 45
 		telefonoext nullable: true, maxSize: 45
+		ufuncion()
+		utipo()
+		// no captura la hora y minutos
+		fechacreacion()
+		cursos(display:false)
+		
 	}
 	
 	String toString(){

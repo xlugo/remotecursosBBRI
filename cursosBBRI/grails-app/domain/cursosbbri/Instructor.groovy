@@ -21,7 +21,8 @@ class Instructor {
 	static belongsTo = [Ufuncion, Utipo, Utitulo]
 
 	static constraints = {
-		unisoft maxSize: 45
+		unisoft maxSize: 45, blank : false, unique:true
+		utitulo()
 		nombres maxSize: 45
 		apellidopaterno maxSize: 45
 		apellidomaterno maxSize: 45
@@ -31,6 +32,10 @@ class Instructor {
 		oficina nullable: true, maxSize: 45
 		telefono nullable: true, maxSize: 45
 		telefonoext nullable: true, maxSize: 45
+		ufuncion()
+		utipo()
+		grupos(display:false)
+		fechacreacion()
 	}
 	
 	String toString(){

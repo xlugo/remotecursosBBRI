@@ -7,7 +7,8 @@ class Cmodalidad {
 	static hasMany = [cursos: Curso]
 
 	static constraints = {
-		descripcion maxSize: 128
+		descripcion maxSize: 128, blank : false, unique:true
+		cursos(display:false)
 	}
 	
 	String toString(){
