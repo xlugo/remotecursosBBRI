@@ -15,7 +15,7 @@ class Grupo {
 
 	static constraints = {
 		curso()
-		salon()
+		salon(unique:['fhorainicio','fhorafinal'])
 		fhorainicio()
 		fhorafinal()
 		fechaapertura nullable: true
