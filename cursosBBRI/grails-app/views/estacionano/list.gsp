@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'estacionano.label', default: 'Estacionano')}" />
+		<g:set var="entityName" value="${message(code: 'estacionano.label', default: 'Estacion del año')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -22,18 +22,14 @@
 			</g:if>
 			<table>
 				<thead>
-					<tr>
-					
+					<tr>					
 						<g:sortableColumn property="descripcion" title="${message(code: 'estacionano.descripcion.label', default: 'Descripcion')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${estacionanoInstanceList}" status="i" var="estacionanoInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${estacionanoInstance.id}">${fieldValue(bean: estacionanoInstance, field: "descripcion")}</g:link></td>
-					
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">					
+						<td><g:link action="show" id="${estacionanoInstance.id}">${fieldValue(bean: estacionanoInstance, field: "descripcion")}</g:link></td>					
 					</tr>
 				</g:each>
 				</tbody>

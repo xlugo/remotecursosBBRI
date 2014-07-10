@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'unisoft', 'error')} required">
 	<label for="unisoft">
-		<g:message code="contacto.unisoft.label" default="Unisoft" />
+		<g:message code="contacto.unisoft.label" default="ID" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="unisoft" maxlength="45" required="" value="${contactoInstance?.unisoft}"/>
@@ -12,7 +12,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'utitulo', 'error')} required">
 	<label for="utitulo">
-		<g:message code="contacto.utitulo.label" default="Utitulo" />
+		<g:message code="contacto.utitulo.label" default="Título académico" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="utitulo" name="utitulo.id" from="${cursosbbri.Utitulo.list()}" optionKey="id" required="" value="${contactoInstance?.utitulo?.id}" class="many-to-one"/>
@@ -28,7 +28,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'apellidopaterno', 'error')} required">
 	<label for="apellidopaterno">
-		<g:message code="contacto.apellidopaterno.label" default="Apellidopaterno" />
+		<g:message code="contacto.apellidopaterno.label" default="Apellido paterno" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="apellidopaterno" maxlength="45" required="" value="${contactoInstance?.apellidopaterno}"/>
@@ -36,7 +36,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'apellidomaterno', 'error')} required">
 	<label for="apellidomaterno">
-		<g:message code="contacto.apellidomaterno.label" default="Apellidomaterno" />
+		<g:message code="contacto.apellidomaterno.label" default="Apellido materno" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="apellidomaterno" maxlength="45" required="" value="${contactoInstance?.apellidomaterno}"/>

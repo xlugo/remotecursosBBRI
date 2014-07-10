@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'pacademico.label', default: 'Pacademico')}" />
+		<g:set var="entityName" value="${message(code: 'pacademico.label', default: 'Periodo académico')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
