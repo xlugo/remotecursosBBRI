@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'cmodalidad.label', default: 'Cmodalidad')}" />
+		<g:set var="entityName" value="${message(code: 'cmodalidad.label', default: 'Modalidad')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>

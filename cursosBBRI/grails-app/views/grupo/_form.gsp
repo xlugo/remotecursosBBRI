@@ -23,7 +23,7 @@
 		<g:message code="grupo.fhorainicio.label" default="Fhorainicio" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="fhorainicio" precision="day"  value="${grupoInstance?.fhorainicio}"  />
+	<g:datePicker name="fhorainicio" precision="minute"  value="${grupoInstance?.fhorainicio}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: grupoInstance, field: 'fhorafinal', 'error')} required">
@@ -31,7 +31,7 @@
 		<g:message code="grupo.fhorafinal.label" default="Fhorafinal" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="fhorafinal" precision="day"  value="${grupoInstance?.fhorafinal}"  />
+	<g:datePicker name="fhorafinal" precision="minute"  value="${grupoInstance?.fhorafinal}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: grupoInstance, field: 'fechaapertura', 'error')} ">

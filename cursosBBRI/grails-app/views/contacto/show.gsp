@@ -34,7 +34,7 @@
 			
 				<g:if test="${contactoInstance?.utitulo}">
 				<li class="fieldcontain">
-					<span id="utitulo-label" class="property-label"><g:message code="contacto.utitulo.label" default="Utitulo" /></span>
+					<span id="utitulo-label" class="property-label"><g:message code="utitulo.label" default="Grado" /></span>
 					
 						<span class="property-value" aria-labelledby="utitulo-label"><g:link controller="utitulo" action="show" id="${contactoInstance?.utitulo?.id}">${contactoInstance?.utitulo?.encodeAsHTML()}</g:link></span>
 					
@@ -52,7 +52,7 @@
 			
 				<g:if test="${contactoInstance?.apellidopaterno}">
 				<li class="fieldcontain">
-					<span id="apellidopaterno-label" class="property-label"><g:message code="contacto.apellidopaterno.label" default="Apellidopaterno" /></span>
+					<span id="apellidopaterno-label" class="property-label"><g:message code="contacto.apellidopaterno.label" default="Apellido paterno" /></span>
 					
 						<span class="property-value" aria-labelledby="apellidopaterno-label"><g:fieldValue bean="${contactoInstance}" field="apellidopaterno"/></span>
 					
@@ -61,7 +61,7 @@
 			
 				<g:if test="${contactoInstance?.apellidomaterno}">
 				<li class="fieldcontain">
-					<span id="apellidomaterno-label" class="property-label"><g:message code="contacto.apellidomaterno.label" default="Apellidomaterno" /></span>
+					<span id="apellidomaterno-label" class="property-label"><g:message code="contacto.apellidomaterno.label" default="Apellido materno" /></span>
 					
 						<span class="property-value" aria-labelledby="apellidomaterno-label"><g:fieldValue bean="${contactoInstance}" field="apellidomaterno"/></span>
 					
@@ -124,7 +124,7 @@
 			
 				<g:if test="${contactoInstance?.ufuncion}">
 				<li class="fieldcontain">
-					<span id="ufuncion-label" class="property-label"><g:message code="contacto.ufuncion.label" default="Ufuncion" /></span>
+					<span id="ufuncion-label" class="property-label"><g:message code="ufuncion.label" default="Categorización" /></span>
 					
 						<span class="property-value" aria-labelledby="ufuncion-label"><g:link controller="ufuncion" action="show" id="${contactoInstance?.ufuncion?.id}">${contactoInstance?.ufuncion?.encodeAsHTML()}</g:link></span>
 					
@@ -133,7 +133,7 @@
 			
 				<g:if test="${contactoInstance?.utipo}">
 				<li class="fieldcontain">
-					<span id="utipo-label" class="property-label"><g:message code="contacto.utipo.label" default="Utipo" /></span>
+					<span id="utipo-label" class="property-label"><g:message code="utipo.label" default="Contraro" /></span>
 					
 						<span class="property-value" aria-labelledby="utipo-label"><g:link controller="utipo" action="show" id="${contactoInstance?.utipo?.id}">${contactoInstance?.utipo?.encodeAsHTML()}</g:link></span>
 					

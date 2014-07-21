@@ -24,6 +24,6 @@ class Grupo {
 	}
 	
 	String toString(){
-		"$salon  $fhorainicio"
+		"$salon,   $fhorainicio"
 	}
 }

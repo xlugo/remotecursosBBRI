@@ -7,7 +7,7 @@
 		<g:message code="alumno.unisoft.label" default="Unisoft" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="unisoft" maxlength="45" required="" value="${alumnoInstance?.unisoft}" />
+	<g:textField name="unisoft" maxlength="45" required="" value="${alumnoInstance?.unisoft}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'utitulo', 'error')} required">
@@ -15,7 +15,7 @@
 		<g:message code="alumno.utitulo.label" default="Utitulo" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="utitulo" name="utitulo.id" from="${cursosbbri.Utitulo.list()}" optionKey="id" required="" value="${alumnoInstance?.utitulo?.id}" class="many-to-one"/>
+	<g:select id="utitulo" name="utitulo.id" from="${cursosbbri.Utitulo.list()}" optionKey="id" required="" value="${alumnoInstance?.utitulo?.id}" class="many-to-one" readonly="readonly"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'nombres', 'error')} required">
@@ -23,12 +23,12 @@
 		<g:message code="alumno.nombres.label" default="Nombres" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="nombres" maxlength="45" required="" value="${alumnoInstance?.nombres}"/>
+	<g:textField name="nombres" maxlength="45" required="" value="${alumnoInstance?.nombres}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'apellidopaterno', 'error')} required">
 	<label for="apellidopaterno">
-		<g:message code="alumno.apellidopaterno.label" default="Apellidopaterno" />
+		<g:message code="alumno.apellidopaterno.label" default="Apellido paterno" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="apellidopaterno" maxlength="45" required="" value="${alumnoInstance?.apellidopaterno}"/>
@@ -36,7 +36,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'apellidomaterno', 'error')} required">
 	<label for="apellidomaterno">
-		<g:message code="alumno.apellidomaterno.label" default="Apellidomaterno" />
+		<g:message code="alumno.apellidomaterno.label" default="Apellido materno" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="apellidomaterno" maxlength="45" required="" value="${alumnoInstance?.apellidomaterno}"/>
@@ -105,20 +105,18 @@
 	</label>
 	<g:select id="utipo" name="utipo.id" from="${cursosbbri.Utipo.list()}" optionKey="id" required="" value="${alumnoInstance?.utipo?.id}" class="many-to-one"/>
 </div>
-
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'grupos', 'error')} ">
 	<label for="grupos">
 		<g:message code="alumno.grupos.label" default="Grupos" />
 		
 	</label>
-	<g:select name="grupos" from="${cursosbbri.Grupo.list()}" multiple="multiple" optionKey="id" size="5" value="${alumnoInstance?.grupos*.id}" class="many-to-many"/>
+	<g:select name="grupos" from="${cursosbbri.Grupo.list()}" multiple="multiple" optionKey="id" size="5" value="${alumnoInstance?.grupos*.id}" class="many-to-many" />
 </div>
-
 <div class="fieldcontain ${hasErrors(bean: alumnoInstance, field: 'fechacreacion', 'error')} required">
 	<label for="fechacreacion">
 		<g:message code="alumno.fechacreacion.label" default="Fechacreacion" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="fechacreacion" precision="day"  value="${alumnoInstance?.fechacreacion}"  />
+	<g:datePicker name="fechacreacion" precision="day"  value="${alumnoInstance?.fechacreacion}" readonly="readonly" />
 </div>
 

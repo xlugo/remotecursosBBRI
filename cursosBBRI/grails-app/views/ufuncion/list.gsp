@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'ufuncion.label', default: 'Ufuncion')}" />
+		<g:set var="entityName" value="${message(code: 'ufuncion.label', default: 'Categorización')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>

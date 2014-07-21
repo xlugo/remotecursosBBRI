@@ -24,7 +24,7 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="curso.pacademico.label" default="Pacademico" /></th>
+						<th><g:message code="pacademico.label" default="Pacademico" /></th>
 					
 						<th><g:message code="curso.ctitulo.label" default="Ctitulo" /></th>
 					

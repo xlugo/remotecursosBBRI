@@ -26,7 +26,7 @@
 					
 						<g:sortableColumn property="unisoft" title="${message(code: 'contacto.unisoft.label', default: 'Unisoft')}" />
 					
-						<th><g:message code="contacto.utitulo.label" default="Utitulo" /></th>
+						<th><g:message code="utitulo.label" default="Grado" /></th>
 					
 						<g:sortableColumn property="nombres" title="${message(code: 'contacto.nombres.label', default: 'Nombres')}" />
 					

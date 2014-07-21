@@ -12,7 +12,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'utitulo', 'error')} required">
 	<label for="utitulo">
-		<g:message code="contacto.utitulo.label" default="Título académico" />
+		<g:message code="utitulo.label" default="Título académico" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="utitulo" name="utitulo.id" from="${cursosbbri.Utitulo.list()}" optionKey="id" required="" value="${contactoInstance?.utitulo?.id}" class="many-to-one"/>
@@ -76,7 +76,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'telefono', 'error')} ">
 	<label for="telefono">
-		<g:message code="contacto.telefono.label" default="Telefono" />
+		<g:message code="contacto.telefono.label" default="Teléfono" />
 		
 	</label>
 	<g:textField name="telefono" maxlength="45" value="${contactoInstance?.telefono}"/>
@@ -84,7 +84,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'telefonoext', 'error')} ">
 	<label for="telefonoext">
-		<g:message code="contacto.telefonoext.label" default="Telefonoext" />
+		<g:message code="contacto.telefonoext.label" default="Número de extensión" />
 		
 	</label>
 	<g:textField name="telefonoext" maxlength="45" value="${contactoInstance?.telefonoext}"/>
@@ -92,7 +92,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'ufuncion', 'error')} required">
 	<label for="ufuncion">
-		<g:message code="contacto.ufuncion.label" default="Ufuncion" />
+		<g:message code="ufuncion.label" default="Categorización" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="ufuncion" name="ufuncion.id" from="${cursosbbri.Ufuncion.list()}" optionKey="id" required="" value="${contactoInstance?.ufuncion?.id}" class="many-to-one"/>
@@ -100,7 +100,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: contactoInstance, field: 'utipo', 'error')} required">
 	<label for="utipo">
-		<g:message code="contacto.utipo.label" default="Utipo" />
+		<g:message code="utipo.label" default="Contrato" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="utipo" name="utipo.id" from="${cursosbbri.Utipo.list()}" optionKey="id" required="" value="${contactoInstance?.utipo?.id}" class="many-to-one"/>
