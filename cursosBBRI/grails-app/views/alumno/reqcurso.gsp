@@ -8,6 +8,7 @@
 		
 		<div id="create-alumno" class="content scaffold-create" role="main">
 			<h1><g:message code="default.reqcurso.label" args="[entityName]" /></h1>
+			Por favor selecciona el curso 
 			<g:form action="fsolicitud" >
 			<g:hiddenField name="cid" value="1" />
 				  <fieldset class="form">

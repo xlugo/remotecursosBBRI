@@ -20,6 +20,7 @@ class GrupoController {
     }
 
     def save() {
+		 
         def grupoInstance = new Grupo(params)
         if (!grupoInstance.save(flush: true)) {
             render(view: "create", model: [grupoInstance: grupoInstance])
@@ -28,6 +29,8 @@ class GrupoController {
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'grupo.label', default: 'Grupo'), grupoInstance.id])
         redirect(action: "show", id: grupoInstance.id)
+        
+		
     }
 
     def show(Long id) {
@@ -53,7 +56,8 @@ class GrupoController {
     }
 
     def update(Long id, Long version) {
-        def grupoInstance = Grupo.get(id)
+		def grupoInstance = Grupo.get(id)
+        
         if (!grupoInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'grupo.label', default: 'Grupo'), id])
             redirect(action: "list")
@@ -76,9 +80,40 @@ class GrupoController {
             render(view: "edit", model: [grupoInstance: grupoInstance])
             return
         }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'grupo.label', default: 'Grupo'), grupoInstance.id])
-        redirect(action: "show", id: grupoInstance.id)
+		
+		// a parte de editar debemos enviar confirmacion sí es el caso  
+		
+	if (params.fechaapertura){
+		def alumnolist = grupoInstance.alumnos.findAll()
+		def instructorInstance = Instructor.findById(grupoInstance.instructor.id)
+		if (alumnolist && instructorInstance){
+						
+			alumnolist.each {
+				def c = it.correo.toString()
+				sendMail {
+					to c
+					subject "Confirmación de apertura de curso Blackboard"
+					body "Por este medio se confirma la apertura del curso  con fecha del : " + grupoInstance.fhorainicio
+				  }			  
+				
+				}
+				
+			
+			def ci = instructorInstance.correo.toString()
+			sendMail {
+				to instructorInstance.correo.toString()
+				subject "Confirmación de apertura de curso Blackboard " 
+				body "Por este medio se confirma la apertura del curso con fecha del: " + grupoInstance.fhorainicio
+			  } 
+			
+			  
+			}// no hay alumnos o instructor
+		}
+		
+		
+		flash.message = message(code: 'default.updated.message', args: [message(code: 'grupo.label', default: 'Grupo'), grupoInstance.id])
+		redirect(action: "show", id: grupoInstance.id)
+	   
     }
 
     def delete(Long id) {

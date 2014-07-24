@@ -21,6 +21,7 @@ class AlumnoController {
 	
 
 
+
     def save() {
         def alumnoInstance = new Alumno(params)
         if (!alumnoInstance.save(flush: true)) {
@@ -54,12 +55,102 @@ class AlumnoController {
 		*/
 	}
 	
-	def reqcurso(){
-	//[alumnoInstance: new Alumno(params)]
-    // solo se rendera la reqcurso.gsp
+	def ofertagrupos(){
+		
+		def courseInstance = Curso.findById(params.curso)
+		
+		if(courseInstance){
+		    def ufunctionlist = courseInstance.ufuncions.findAll()
+			//**************************************************************!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			 // seleccionar los grupos que no tienen fecha de apertura ni fecha de cancelación
+			def grouplist = Grupo.findAllByCurso(courseInstance)
+			def contactInstance = Contacto.findById(courseInstance.contacto.id)
+			// mail
+			
+			if (grouplist){
+				//if es curso presencial
+				// si es curso virtual es otra vista
+			  render(view: "ofertagrupos", model: [grouplist:grouplist,courseInstance: courseInstance, ufunctionlist: ufunctionlist, contactInstance:contactInstance ])
+			  return
+			 }else{
+			render "Falta de alguno de los modelos"
+			}
+		}else{
+		 render "wrong"
+		}
+	}
+	
+	def inscribe(){
+		def studentInstance = Alumno.findByUnisoft(params.unisoft)
+		def groupInstance = Grupo.findById(params.grupo)
+		def courseInstance = Curso.findById(params.curso)
+		
+	
+		if (!studentInstance){ // no existe el alumno
+			if(groupInstance && courseInstance){
+				def ufunctionlist = courseInstance.ufuncions.findAll()
+				def contactInstance = Contacto.findById(courseInstance.contacto.id)				
+                render(view: "finscripcion", model: [courseInstance: courseInstance, groupInstance:groupInstance,ufunctionlist:ufunctionlist,contactInstance:contactInstance ])
+				return
+			}else{
+			render "no existe el alumno pero NO existen el grupo o el curso"			
+			}
+		}else{
+		 if(!groupInstance){
+			 render "grupo bad"
+		 }else{
+		   studentInstance.addToGrupos(groupInstance)		 
+		   render "Hemos recibido tu inscripción, te enviaremos un correo para confirmarte la apertura del grupo"
+		 }
+		}
+		
+	}
 	
 	
+	def saveinscripcion(){
+		def alumnoInstance = new Alumno(params)
+		if (!alumnoInstance.save(flush:true)){
+			render "el usuario NO "
+		}else{
+		     def groupInstance = Grupo.findById(params.grupo)
+			 if(!groupInstance){
+			   render "grupo bad"
+			 }else{
+			 alumnoInstance.addToGrupos(groupInstance)
+			 render "Hemos recibido tu inscripción, te enviaremos un correo para confirmarte la apertura del grupo"
+		   }		
+		}
+	}
+	
+	def ofertacursos(){
+	
+	def ano = '2014'
+	def estacion = 'Verano'
+	def pacademicolist = Pacademico.executeQuery("select P from Pacademico P INNER JOIN P.estacionano EA where EA.descripcion = ? AND date_format(P.ano, '%Y') = ? ", [estacion, ano] )
+	
+	// solamente uno
+	if(pacademicolist && pacademicolist.size() == 1){
+		render pacademicolist.get(0).id
+		String pa = pacademicolist.get(0).id.toString()
+		def courselist = Curso.findAllByPacademico(pacademicolist.get(0))
+		if (courselist){
+			render(view: "ofertacursos", model: [courselist: courselist])
+			return				
+		}else{
+		    flash.message = message(code: 'default.group.notfound.label')
+             render(view: "notfound")
+	        return
+		}
+	}else{
+	flash.message = message(code: 'default.course.notfound.label')
+    render(view: "notfound")
+	return
+	}
+	  	
 }
+	
+	
+	
 	
 	def fsolicitud(String unisoft){
 		/*def courseInstance = Curso.findById("2")

@@ -17,15 +17,9 @@
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
-	<body>
-		
-		
-	<div id="page">
-	
-		  <div id="spinner" class="spinner" style="display: none;">
-		   <img src="${createLinkTo(dir:'images',file:'spinner.gif')}"alt="Spinner" />
-		  </div>	
-		  	
+	<body>		
+	<div id="page">		  	
+	 <h1><g:message code="default.solicitud.label" args="[entityName]" /></h1>
 	
 		   <div id="content">
 		    <g:layoutBody />

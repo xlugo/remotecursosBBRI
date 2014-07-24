@@ -22,14 +22,7 @@
 		
 	<div id="page">
 	
-		  <div id="spinner" class="spinner" style="display: none;">
-		   <img src="${createLinkTo(dir:'images',file:'spinner.gif')}"alt="Spinner" />
-		  </div>	
-		  	
-		  <div id="topbar">
-	      <g:render template="/common/topbar" />	
-	      </div> 
-	      
+		  	      
 		  <div id="header">
 			<h1>Control de cursos Blackboard</h1>
 		   </div>	
