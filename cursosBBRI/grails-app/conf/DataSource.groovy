@@ -1,8 +1,8 @@
 dataSource {
 	pooled = true
 	driverClassName = "com.mysql.jdbc.Driver"
-	username = "root"
-	password = "lugo35"
+	username = "flugo"
+	password = "flugo123"
 	dialect = org.hibernate.dialect.MySQL5InnoDBDialec
 }
 hibernate {
@@ -36,10 +36,10 @@ environments {
 	}
 	
 	 */
-	/*
+	
 	production {
 		
-		
+		/*
 		dataSource {
 			dbCreate = "update"
 			url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
@@ -55,7 +55,15 @@ environments {
 			   validationQuery="SELECT 1"
 			}
 		}
+		*/
+		
+		dataSource{
+			//dbCreate = "create"
+			dbCreate = "update"
+			url = "jdbc:mysql://localhost/flugo"
+		}
+		
 	   
 	}
-	 */
+	 
 }

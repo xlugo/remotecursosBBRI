@@ -111,3 +111,19 @@ grails {
 			   "mail.smtp.socketFactory.fallback":"false"]
  
  } }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'seguridad.Usuario'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'seguridad.UsuarioRol'
+grails.plugin.springsecurity.authority.className = 'seguridad.Rol'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+

@@ -24,11 +24,6 @@
 	
 	      
 		  	      
-		  <div id="topbar">
-			<g:render template="/common/topbar" />
-		   </div>
-	
-		  	      
 		  <div id="header">
 			<h1>Control de cursos Blackboard</h1>
 		   </div>	
@@ -37,17 +32,7 @@
 		    <g:layoutBody />
 		   </div>
 		   
-		   <!-- 
-		   <div id="sidebar">
-			<g:render template="/common/buddies" />
-		   </div>
-		    -->
-		   		   	
-		  <div id="footer">
-		    <g:render template="/common/footer" />
-	 	  </div>
-		   
-		   
+		
 	</div>		
  </body>
 </html>

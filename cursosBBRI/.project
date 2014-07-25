@@ -28,5 +28,10 @@
 			<type>2</type>
 			<location>/root/.grails/2.1.5/projects/cursosBBRI/plugins</location>
 		</link>
+		<link>
+			<name>groovy</name>
+			<type>2</type>
+			<location>/root/.grails/2.1.5/projects/cursosbbri/plugins/spring-security-core-2.0-RC2/src/groovy</location>
+		</link>
 	</linkedResources>
 </projectDescription>

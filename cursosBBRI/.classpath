@@ -13,5 +13,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.grails.ide.eclipse.core.CLASSPATH_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
+	<classpathentry kind="lib" path="/root/.grails/2.1.5/projects/cursosbbri/plugin-classes"/>
+	<classpathentry kind="lib" path="/root/.grails/2.1.5/projects/cursosbbri/resources/org"/>
+	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry kind="output" path="target-eclipse/classes"/>
 </classpath>
